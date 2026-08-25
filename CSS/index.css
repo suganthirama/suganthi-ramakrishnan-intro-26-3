@@ -93,3 +93,59 @@ section {
     padding: 10px ;
     border-radius: 5px;
 }
+
+form {
+  max-width: 600px;
+  margin: 10px;
+  padding: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+form button {
+  padding: 12px 24px;
+  min-height: 44px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  form {
+    width: 90%;
+    padding: 15px;
+  }
+
+  form input,
+  form textarea {
+    min-height: 44px;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  form button {
+    width: 100%;
+    min-height: 48px;
+    font-size: 16px;
+  }
+}
+
+#messages button{
+    margin-left: 10px;
+   }
