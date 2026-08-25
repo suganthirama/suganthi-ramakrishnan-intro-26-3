@@ -31,14 +31,14 @@ messageForm.addEventListener("submit", function(event){
     const messageSection = document.getElementById("messages");
     const messageList = messageSection.querySelector("ul");
     const newMessage = document.createElement("li")
-    newMessage.innerHTML = '<a href = "mailto: '+ usersEmail +' " >' + usersName + '</a><span> '+usersMessage+'<span>';
+    newMessage.innerHTML = '<a href = "mailto:'+ usersEmail +' " >' + usersName + '</a><span> '+usersMessage+'</span>';
 
-    var removeButton = document.createElement("button");
+    const removeButton = document.createElement("button");
     removeButton.innerText = "remove";
     removeButton.setAttribute("type","button");
 
     removeButton.addEventListener("click", function(){
-        var entry = removeButton.parentNode;
+        const entry = removeButton.parentNode;
         entry.remove();
     });
 
