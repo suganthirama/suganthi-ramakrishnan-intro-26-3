@@ -46,3 +46,27 @@ messageForm.addEventListener("submit", function(event){
     messageList.appendChild(newMessage)
     messageForm.reset();
 });
+
+var repositories = [];
+
+fetch("https://api.github.com/users/suganthirama/repos")
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    repositories = data;
+    console.log(repositories);
+
+      const projectSection = document.getElementById("Projects");
+      const projectList = projectSection.querySelector("ul");
+
+      for(let i= 0; i < repositories.length; i++){
+          const project= document.createElement("li");
+          project.innerText = repositories[i].name;
+          projectList.appendChild(project);
+      }
+
+  })
+  .catch(function(error) {
+    console.log("There was an error:", error);
+  })

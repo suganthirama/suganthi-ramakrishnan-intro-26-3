@@ -149,3 +149,35 @@ form button {
 #messages button{
     margin-left: 10px;
    }
+@media (max-width: 600px) {
+  #projects ul {
+    flex-direction: column;
+  }
+
+  #projects li {
+    width: auto;
+  }
+}
+
+#projects ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+#projects li {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1 1 200px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#projects li:hover {
+  background-color: #e8e8e8;
+}
